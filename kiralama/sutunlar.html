@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="theme-color" content="#0d59f2" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png" />
     <title>Sütun ve Yükseltici Kiralama Sarıyer | Kaide Pasta Standı - Sarıyer Orgist</title>
     <meta name="description"
         content="Düğün ve organizasyonlar için sütun, kaide ve yükseltici kiralama. Gold, pleksi, ahşap sütunlar. ☎ 0539 446 58 34" />
@@ -26,13 +27,24 @@
         }
     </style>
 </head>
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://sariyerorgist.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Kiralama", "item": "https://sariyerorgist.com/kiralama.html"}
+        ]
+    }
+    </script>
 
 <body class="bg-background-dark text-slate-100 font-display antialiased">
     <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex items-center justify-between h-16 lg:h-20">
                 <a href="/" class="flex items-center gap-2"><span
-                        class="material-symbols-outlined text-primary text-3xl">event_available</span><span
+                        <img src="/images/logo.png" alt="Sar�yer Orgist Logo" class="h-10 w-10 rounded-lg" /><span
                         class="font-bold text-lg text-white">Sarıyer Orgist</span></a>
                 <nav class="hidden lg:flex gap-8 items-center"><a
                         class="text-sm font-medium text-slate-300 hover:text-white" href="/">Ana Sayfa</a><a
@@ -77,7 +89,7 @@
         <div class="absolute inset-0 z-0">
             <div
                 class="absolute inset-0 bg-gradient-to-b from-background-dark/60 via-background-dark/80 to-background-dark z-10">
-            </div><img alt="Sütun ve yükseltici" class="w-full h-full object-cover" src="/images/sutunlar-hero.png" />
+            </div><img alt="Sütun ve yükseltici" class="w-full h-full object-cover" src="/images/sutunlar-hero.webp" / loading="lazy">
         </div>
         <div class="relative z-20 max-w-7xl mx-auto px-4 pt-20 pb-12 text-center">
             <nav class="text-sm text-slate-400 mb-6"><a href="/" class="hover:text-white">Ana Sayfa</a> / <a

@@ -1,0 +1,29 @@
+{
+    "name": "Sarıyer Orgist - Organizasyon ve Ekipman Kiralama",
+    "short_name": "Sarıyer Orgist",
+    "description": "İstanbul genelinde profesyonel organizasyon ve ekipman kiralama hizmetleri",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f1115",
+    "theme_color": "#0d59f2",
+    "orientation": "portrait-primary",
+    "lang": "tr",
+    "categories": [
+        "business",
+        "lifestyle"
+    ],
+    "icons": [
+        {
+            "src": "/images/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/images/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

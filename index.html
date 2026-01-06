@@ -6,6 +6,20 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="theme-color" content="#0d59f2" />
 
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/images/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png" />
+
+    <!-- Google Analytics 4 (Placeholder - Replace G-XXXXXXXXXX with actual ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
     <!-- SEO Meta Tags -->
     <title>Sarıyer Organizasyon | Ses Işık Sahne Kiralama | Düğün DJ Ekipman - Sarıyer Orgist</title>
     <meta name="description"
@@ -46,7 +60,7 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Sarıyer Orgist",
-  "description": "Sarıyer, Beşiktaş, Şişli, Kağıthane bölgelerinde profesyonel organizasyon ve ekipman kiralama hizmetleri",
+  "description": "İstanbul genelinde profesyonel organizasyon ve ekipman kiralama hizmetleri",
   "url": "https://sariyerorgist.com",
   "telephone": "+905394465834",
   "email": "info@sariyerorgist.com",
@@ -56,12 +70,51 @@
     "addressRegion": "İstanbul",
     "addressCountry": "TR"
   },
-  "areaServed": [
-    {"@type": "City", "name": "Sarıyer"},
-    {"@type": "City", "name": "Beşiktaş"},
-    {"@type": "City", "name": "Şişli"},
-    {"@type": "City", "name": "Kağıthane"}
-  ],
+  "areaServed": {
+    "@type": "City",
+    "name": "İstanbul",
+    "containsPlace": [
+      {"@type": "AdministrativeArea", "name": "Adalar"},
+      {"@type": "AdministrativeArea", "name": "Arnavutköy"},
+      {"@type": "AdministrativeArea", "name": "Ataşehir"},
+      {"@type": "AdministrativeArea", "name": "Avcılar"},
+      {"@type": "AdministrativeArea", "name": "Bağcılar"},
+      {"@type": "AdministrativeArea", "name": "Bahçelievler"},
+      {"@type": "AdministrativeArea", "name": "Bakırköy"},
+      {"@type": "AdministrativeArea", "name": "Başakşehir"},
+      {"@type": "AdministrativeArea", "name": "Bayrampaşa"},
+      {"@type": "AdministrativeArea", "name": "Beşiktaş"},
+      {"@type": "AdministrativeArea", "name": "Beykoz"},
+      {"@type": "AdministrativeArea", "name": "Beylikdüzü"},
+      {"@type": "AdministrativeArea", "name": "Beyoğlu"},
+      {"@type": "AdministrativeArea", "name": "Büyükçekmece"},
+      {"@type": "AdministrativeArea", "name": "Çatalca"},
+      {"@type": "AdministrativeArea", "name": "Çekmeköy"},
+      {"@type": "AdministrativeArea", "name": "Esenler"},
+      {"@type": "AdministrativeArea", "name": "Esenyurt"},
+      {"@type": "AdministrativeArea", "name": "Eyüpsultan"},
+      {"@type": "AdministrativeArea", "name": "Fatih"},
+      {"@type": "AdministrativeArea", "name": "Gaziosmanpaşa"},
+      {"@type": "AdministrativeArea", "name": "Güngören"},
+      {"@type": "AdministrativeArea", "name": "Kadıköy"},
+      {"@type": "AdministrativeArea", "name": "Kağıthane"},
+      {"@type": "AdministrativeArea", "name": "Kartal"},
+      {"@type": "AdministrativeArea", "name": "Küçükçekmece"},
+      {"@type": "AdministrativeArea", "name": "Maltepe"},
+      {"@type": "AdministrativeArea", "name": "Pendik"},
+      {"@type": "AdministrativeArea", "name": "Sancaktepe"},
+      {"@type": "AdministrativeArea", "name": "Sarıyer"},
+      {"@type": "AdministrativeArea", "name": "Silivri"},
+      {"@type": "AdministrativeArea", "name": "Sultanbeyli"},
+      {"@type": "AdministrativeArea", "name": "Sultangazi"},
+      {"@type": "AdministrativeArea", "name": "Şile"},
+      {"@type": "AdministrativeArea", "name": "Şişli"},
+      {"@type": "AdministrativeArea", "name": "Tuzla"},
+      {"@type": "AdministrativeArea", "name": "Ümraniye"},
+      {"@type": "AdministrativeArea", "name": "Üsküdar"},
+      {"@type": "AdministrativeArea", "name": "Zeytinburnu"}
+    ]
+  },
   "serviceType": ["Organizasyon", "Ekipman Kiralama", "Canlı Müzik", "Düğün Organizasyonu"],
   "priceRange": "₺₺",
   "openingHours": "Mo-Su 09:00-22:00",
@@ -70,6 +123,7 @@
   ]
 }
 </script>
+
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap"
@@ -113,6 +167,7 @@
         .text-gradient {
             background: linear-gradient(90deg, #fff, #a5b4fc);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -147,10 +202,10 @@
     <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 lg:h-20">
-                <div class="flex-shrink-0 flex items-center gap-2">
-                    <span class="material-symbols-outlined text-primary text-3xl">event_available</span>
+                <a href="/" class="flex-shrink-0 flex items-center gap-3">
+                    <img src="/images/logo.png" alt="Sarıyer Orgist Logo" class="h-10 w-10 rounded-lg" />
                     <span class="font-bold text-lg lg:text-xl tracking-tight text-white">Sarıyer Orgist</span>
-                </div>
+                </a>
                 <nav class="hidden lg:flex gap-8 items-center">
                     <a class="text-sm font-medium text-slate-300 hover:text-white transition-colors" href="#hero">Ana
                         Sayfa</a>
@@ -220,7 +275,8 @@
             <div class="absolute inset-0 bg-gradient-to-t from-[#0f1115] via-[#0f1115]/90 to-[#0f1115]/40 z-10"></div>
             <img alt="Dark elegant concert stage with blue lighting and crowd silhouette"
                 class="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo9oQfPxdCQdWIWjB6kAGE5W7FuWQ4x01tUGyPTA3WgoOV0TdAOQEvOYB3V4l6aDXEGEjz1TvAn9vxv31NyJhBQJpSxgUC_npF5w9E8iPpLx-QvcFiAJzdqbzVH7W5TNhL2kyCyWcQHC1BRUBsYmel8ZRhN-_r-qAOGudAlY1thzAJXVR1LHLENkVhiNVmA3ZhUehSH8NEWPKlXtm8MIUCMwijOqhiB67HUhfKLVO-QeCjg7SF1QDtMEDaybZXcN4AomHfBavMEGXG" />
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo9oQfPxdCQdWIWjB6kAGE5W7FuWQ4x01tUGyPTA3WgoOV0TdAOQEvOYB3V4l6aDXEGEjz1TvAn9vxv31NyJhBQJpSxgUC_npF5w9E8iPpLx-QvcFiAJzdqbzVH7W5TNhL2kyCyWcQHC1BRUBsYmel8ZRhN-_r-qAOGudAlY1thzAJXVR1LHLENkVhiNVmA3ZhUehSH8NEWPKlXtm8MIUCMwijOqhiB67HUhfKLVO-QeCjg7SF1QDtMEDaybZXcN4AomHfBavMEGXG"
+                / loading="lazy">
         </div>
         <div
             class="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 flex flex-col items-center text-center">
@@ -403,7 +459,8 @@
                         class="w-1/3 sm:w-full aspect-square sm:aspect-square bg-surface-dark-lighter relative overflow-hidden shrink-0">
                         <img alt="Large black speaker system on a stand"
                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuArUONK_igYpPsonz1tpRhFabKaY6vH6H19P-cnSHdy98aLuONeOHsEtvf0iEqukApr2xd0b7mI4b8O5iFIy51EcHMPwnNJuXsO5TAggK_57bediNkjRU5qebYZhHIMZnTc_oF4l6wop218ivw2idVkWxhcNqfgeaVqo1lSGiVgCK6V0DFqMaeUY7irX2CLhSrTGOj7EM_6TBbyoholCA7yPN6h82ejOCAyUvJ4LGygpczUwEccvodTCHwGwvF5Zy_BmXqI3MCiteNR" />
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuArUONK_igYpPsonz1tpRhFabKaY6vH6H19P-cnSHdy98aLuONeOHsEtvf0iEqukApr2xd0b7mI4b8O5iFIy51EcHMPwnNJuXsO5TAggK_57bediNkjRU5qebYZhHIMZnTc_oF4l6wop218ivw2idVkWxhcNqfgeaVqo1lSGiVgCK6V0DFqMaeUY7irX2CLhSrTGOj7EM_6TBbyoholCA7yPN6h82ejOCAyUvJ4LGygpczUwEccvodTCHwGwvF5Zy_BmXqI3MCiteNR"
+                            / loading="lazy">
                     </div>
                     <div class="p-4 sm:p-5 flex flex-col justify-between w-full">
                         <div>
@@ -431,7 +488,8 @@
                         class="w-1/3 sm:w-full aspect-square sm:aspect-square bg-surface-dark-lighter relative overflow-hidden shrink-0">
                         <img alt="Colorful stage lights pointing upwards"
                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-TzdtLFCueWdLg2uea7euREU80Cu3nq0KnZyyek90ovLgKWaNT8bdDjwR-n9pRlMf-knA0asUeCMu3w37z8ewYLEELLjpWhmghJzYdqeujsyihbvRRa_wtcXRfymlM7w_Xstryu-6Ezi88nfM87rDwyYhVFxOskds3SAKLkxRcLOSnmVALRmd4UsrsulOBO5SGj_IuK_lSkP6bRqEDOynPixkNcRqy9rj0vQnaeK4UX5QZgp3twlnt6c2LzJ0h3irBzJFKEvdyZ5V" />
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-TzdtLFCueWdLg2uea7euREU80Cu3nq0KnZyyek90ovLgKWaNT8bdDjwR-n9pRlMf-knA0asUeCMu3w37z8ewYLEELLjpWhmghJzYdqeujsyihbvRRa_wtcXRfymlM7w_Xstryu-6Ezi88nfM87rDwyYhVFxOskds3SAKLkxRcLOSnmVALRmd4UsrsulOBO5SGj_IuK_lSkP6bRqEDOynPixkNcRqy9rj0vQnaeK4UX5QZgp3twlnt6c2LzJ0h3irBzJFKEvdyZ5V"
+                            / loading="lazy">
                     </div>
                     <div class="p-4 sm:p-5 flex flex-col justify-between w-full">
                         <div>
@@ -459,7 +517,8 @@
                         class="w-1/3 sm:w-full aspect-square sm:aspect-square bg-surface-dark-lighter relative overflow-hidden shrink-0">
                         <img alt="Rows of white tiffany chairs at an event"
                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEJO8_zJMzeMV0BJmePOD-vd021ymTgvseTUb-GS4CTXRiLhmJTU6Hf-C83-5J0SKnyI0VvyW13B8Y5-CUa_ols4z2C0Wrbgvu_EPLR8sfk3gRvsxyQsGURv9KChlST6M2tiYRVEHLlfQMhTLVByZHDBb_DrUeXkds8l9u8PhVPmF9jntHs_4UK1Q41Ec6A4gOvan9HVKXANF_MW2smOUJUfsyFDmLb1KSuaey4OxUHz1T6g9blPji49Op13KZ4gdwA82X5WoJbRt3" />
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEJO8_zJMzeMV0BJmePOD-vd021ymTgvseTUb-GS4CTXRiLhmJTU6Hf-C83-5J0SKnyI0VvyW13B8Y5-CUa_ols4z2C0Wrbgvu_EPLR8sfk3gRvsxyQsGURv9KChlST6M2tiYRVEHLlfQMhTLVByZHDBb_DrUeXkds8l9u8PhVPmF9jntHs_4UK1Q41Ec6A4gOvan9HVKXANF_MW2smOUJUfsyFDmLb1KSuaey4OxUHz1T6g9blPji49Op13KZ4gdwA82X5WoJbRt3"
+                            / loading="lazy">
                     </div>
                     <div class="p-4 sm:p-5 flex flex-col justify-between w-full">
                         <div>
@@ -487,7 +546,8 @@
                         class="w-1/3 sm:w-full aspect-square sm:aspect-square bg-surface-dark-lighter relative overflow-hidden shrink-0">
                         <img alt="Outdoor patio heater radiating warmth"
                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDcYAt1zLIXF-WjUGYNkP5_1tZEIW8A9OhMxI4_niGbeE45OAR5J1yU6qKIPdeJpo-RFbLSk2sWKN2HNGjd4RtBCswqD1pYs9WbCqDVsrW3Lmgc4bhYDkN8QgnMvXyPP6CJrXxMX4kmWwQYEhznT6xWvAOZC_lHhu4lSvapZxeSnK6SsYUlUby2UPq4bFOb5HbZ38KwhCq22gCK_SZyEFkNFsm-l3qELp0hNwFmJlF7xMhTOW3OxwTTxrASh2ZgZXTKXeXJU1yWdq2" />
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDcYAt1zLIXF-WjUGYNkP5_1tZEIW8A9OhMxI4_niGbeE45OAR5J1yU6qKIPdeJpo-RFbLSk2sWKN2HNGjd4RtBCswqD1pYs9WbCqDVsrW3Lmgc4bhYDkN8QgnMvXyPP6CJrXxMX4kmWwQYEhznT6xWvAOZC_lHhu4lSvapZxeSnK6SsYUlUby2UPq4bFOb5HbZ38KwhCq22gCK_SZyEFkNFsm-l3qELp0hNwFmJlF7xMhTOW3OxwTTxrASh2ZgZXTKXeXJU1yWdq2"
+                            / loading="lazy">
                     </div>
                     <div class="p-4 sm:p-5 flex flex-col justify-between w-full">
                         <div>
@@ -617,7 +677,8 @@
                 <div class="lg:w-1/2 relative min-h-[300px] lg:min-h-[400px]">
                     <img alt="Music band performing live on stage with lights"
                         class="absolute inset-0 w-full h-full object-cover"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJyLZwAPVHeLYD8rZqVdtzyIqZ60Q6kX-n4l_195DTC6eHoTLccgcUtyc-ikuoajs_u6UoDDmxt7EXULMp9Spb1Ajr5HA1FdupE4vY0gdwbBVjcDN9TvVygHB7oDCXj62diplnLocLKQ4mv4kWoodAM3dDXy-xEaUQrNazQkUyqsgt-aq-41QK0oFSdjs3gToMND34dUMNLzjXDiv_CRJwXljoKhn5dDKJrbNtlLuGsK9AnAmKohHu8Xvz95iK0p4uXaZ6HSa-8s6G" />
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJyLZwAPVHeLYD8rZqVdtzyIqZ60Q6kX-n4l_195DTC6eHoTLccgcUtyc-ikuoajs_u6UoDDmxt7EXULMp9Spb1Ajr5HA1FdupE4vY0gdwbBVjcDN9TvVygHB7oDCXj62diplnLocLKQ4mv4kWoodAM3dDXy-xEaUQrNazQkUyqsgt-aq-41QK0oFSdjs3gToMND34dUMNLzjXDiv_CRJwXljoKhn5dDKJrbNtlLuGsK9AnAmKohHu8Xvz95iK0p4uXaZ6HSa-8s6G"
+                        / loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/80 to-transparent">
                     </div>
                     <div class="absolute bottom-6 left-6 lg:bottom-8 lg:left-8 text-white z-20">
@@ -726,7 +787,8 @@
                 <div class="col-span-2 row-span-2 rounded-xl overflow-hidden relative group">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         data-alt="Wedding setup with lights"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuApF7VrXIsBx-CBvMEJmWk5zOQt7-fnV2DY7tDBgbkKIMnx-fWgWBO6IAfYJODXD_Sim9i9v2ko7E9nLZ-b5rDke1eMOO1nOMPss7_BT2ZdaF2N7iaKJM3TOnQAgulZ1SCw6ClM0yHRfdhggJw6d58ADpJpSczhI-wkzswMXLIDm4qvqO8zZyCFnnLPbAEjG4B73hNVf5b5YbHeFd_WWedizOo7E0DOUP4qSiKiBnZj2Hi57gtg8gV3wt-cIiY9JmAhD_XoV3Ypmi1z" />
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuApF7VrXIsBx-CBvMEJmWk5zOQt7-fnV2DY7tDBgbkKIMnx-fWgWBO6IAfYJODXD_Sim9i9v2ko7E9nLZ-b5rDke1eMOO1nOMPss7_BT2ZdaF2N7iaKJM3TOnQAgulZ1SCw6ClM0yHRfdhggJw6d58ADpJpSczhI-wkzswMXLIDm4qvqO8zZyCFnnLPbAEjG4B73hNVf5b5YbHeFd_WWedizOo7E0DOUP4qSiKiBnZj2Hi57gtg8gV3wt-cIiY9JmAhD_XoV3Ypmi1z"
+                        / loading="lazy">
                     <div
                         class="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <span class="text-white font-bold text-lg md:text-xl text-center px-4">Düğün
@@ -736,17 +798,20 @@
                 <div class="rounded-xl overflow-hidden relative group">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         data-alt="Concert stage lights"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxTLwUABTfCCsFPWmyum2n1pc6nEibHQB_ZKZiwYpIwsLFGyBcUDtMl7SurypjuR39eL5KeTsAOBIW4MdiOxCi_ebQUi-U_UUw79n1tuMK5jQtndsTtPI_T9sMzV2HcfemaNCUZiSW5INngvKkcF5o3ntupjJcydil7-70yWaXRs1r5jZLAe6IVCd7L5FNtmSNirPo5923BFX9BzTSK_xDIHqW5_Swmjp2ew92C70yp33MVoJJKOSlvteHPiCM9xhvEBZznhVi4d-9" />
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxTLwUABTfCCsFPWmyum2n1pc6nEibHQB_ZKZiwYpIwsLFGyBcUDtMl7SurypjuR39eL5KeTsAOBIW4MdiOxCi_ebQUi-U_UUw79n1tuMK5jQtndsTtPI_T9sMzV2HcfemaNCUZiSW5INngvKkcF5o3ntupjJcydil7-70yWaXRs1r5jZLAe6IVCd7L5FNtmSNirPo5923BFX9BzTSK_xDIHqW5_Swmjp2ew92C70yp33MVoJJKOSlvteHPiCM9xhvEBZznhVi4d-9"
+                        / loading="lazy">
                 </div>
                 <div class="rounded-xl overflow-hidden relative group">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         data-alt="DJ mixing console"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjZgGnp1KE4v3ZYmYdpqknXAmIe57I4uWg1m2PqFmvdY4C-kATM7vifU-IyFhmg3BLOtvcnFvZ7LOWQVdxvqNGXUu2YSZ--cZr_KORR3Bp5H_qcOOTBerUGhkEyf4c9X2o4efMH4Hb8BYEDzsBV1v_p4m--Z1UzRm6BjGPbnBToIJdUY2Km5-btICFkFfiBtxrt52YbAS7bB09bxXTOQ7hs-K4_ggqMi7rIjEbLNc-sB3Rp6tylbrxYF3upEjsiR7a6_I3rmIGXxQy" />
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjZgGnp1KE4v3ZYmYdpqknXAmIe57I4uWg1m2PqFmvdY4C-kATM7vifU-IyFhmg3BLOtvcnFvZ7LOWQVdxvqNGXUu2YSZ--cZr_KORR3Bp5H_qcOOTBerUGhkEyf4c9X2o4efMH4Hb8BYEDzsBV1v_p4m--Z1UzRm6BjGPbnBToIJdUY2Km5-btICFkFfiBtxrt52YbAS7bB09bxXTOQ7hs-K4_ggqMi7rIjEbLNc-sB3Rp6tylbrxYF3upEjsiR7a6_I3rmIGXxQy"
+                        / loading="lazy">
                 </div>
                 <div class="col-span-2 md:col-span-2 rounded-xl overflow-hidden relative group">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         data-alt="Corporate event audience"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-KH905G1PMSI3WoMhIWLRBm2hp9gZjDf9ozqcuw8Cc14OHAASABRPEVXBEclTRbu8F9JJo4VBAnDrN4uVrl-D5f_nrYw8k6t8YwOTEoTDoiSes1KKuYxZH6Ch8y45WmBty7qcygEheGB5Pqd4u522YABxSc31ifSnliYrONMaD985HLP3x8TyhrhzpdvdRt3rzllGnKd6Q3uV8Txh6P16F9t3tD19saXiTyrpGGdga1TTKz6Qj1ntl3imD1iOBNF3hgTbk2pvmloB" />
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-KH905G1PMSI3WoMhIWLRBm2hp9gZjDf9ozqcuw8Cc14OHAASABRPEVXBEclTRbu8F9JJo4VBAnDrN4uVrl-D5f_nrYw8k6t8YwOTEoTDoiSes1KKuYxZH6Ch8y45WmBty7qcygEheGB5Pqd4u522YABxSc31ifSnliYrONMaD985HLP3x8TyhrhzpdvdRt3rzllGnKd6Q3uV8Txh6P16F9t3tD19saXiTyrpGGdga1TTKz6Qj1ntl3imD1iOBNF3hgTbk2pvmloB"
+                        / loading="lazy">
                     <div
                         class="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <span class="text-white font-bold text-lg md:text-xl text-center px-4">Kurumsal
@@ -813,33 +878,62 @@
                     <div class="aspect-video w-full rounded-lg bg-slate-800 mb-6 overflow-hidden relative">
                         <img alt="Map view of Istanbul bosphorus" class="w-full h-full object-cover opacity-60"
                             data-location="Istanbul"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRYCjQCN1x8bGRx1ty83_W_PqxIrAb4BW9v_4OLA9wNOALWgEBbn3movn7S6aJw4iPuEaeIdjjz3GcZch8gj12KdkPzL8XdIy_jwg_m7tnbwDHkRY1PzU7_KJYh3cBoLCmIyUvLGYYQBRYS-vlvIQRhxk0WNgnmL5a-TwT8KiWgohfMs4uzytFBl1irMarZrGacfdlk3s6wMfJhLMeikAgeu_qnR4ANQuBqZDT9wgy-nVR4f9F-UznZv2PqNCHJDe7EJXa0CMXedEz" />
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRYCjQCN1x8bGRx1ty83_W_PqxIrAb4BW9v_4OLA9wNOALWgEBbn3movn7S6aJw4iPuEaeIdjjz3GcZch8gj12KdkPzL8XdIy_jwg_m7tnbwDHkRY1PzU7_KJYh3cBoLCmIyUvLGYYQBRYS-vlvIQRhxk0WNgnmL5a-TwT8KiWgohfMs4uzytFBl1irMarZrGacfdlk3s6wMfJhLMeikAgeu_qnR4ANQuBqZDT9wgy-nVR4f9F-UznZv2PqNCHJDe7EJXa0CMXedEz"
+                            / loading="lazy">
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div
                                 class="bg-black/70 px-4 py-2 rounded text-white text-sm font-bold backdrop-blur-sm text-center">
                                 İstanbul Avrupa Yakası<br class="sm:hidden" /> Merkezli</div>
                         </div>
                     </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="flex items-center gap-2 text-white">
-                            <span class="material-symbols-outlined text-primary">location_on</span>
-                            Sarıyer
-                        </div>
-                        <div class="flex items-center gap-2 text-white">
-                            <span class="material-symbols-outlined text-primary">location_on</span>
-                            Beşiktaş
-                        </div>
-                        <div class="flex items-center gap-2 text-white">
-                            <span class="material-symbols-outlined text-primary">location_on</span>
-                            Şişli
-                        </div>
-                        <div class="flex items-center gap-2 text-white">
-                            <span class="material-symbols-outlined text-primary">location_on</span>
-                            Kağıthane
-                        </div>
+                    <h3 class="text-sm font-bold text-primary mb-4">Avrupa Yakası</h3>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 gap-2 mb-6">
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Arnavutköy</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Avcılar</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Bağcılar</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Bahçelievler</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Bakırköy</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Başakşehir</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Bayrampaşa</span>
+                        <span class="text-xs text-white bg-primary/30 px-2 py-1 rounded font-medium">Beşiktaş</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Beylikdüzü</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Beyoğlu</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Büyükçekmece</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Çatalca</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Esenler</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Esenyurt</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Eyüpsultan</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Fatih</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Gaziosmanpaşa</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Güngören</span>
+                        <span class="text-xs text-white bg-primary/30 px-2 py-1 rounded font-medium">Kağıthane</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Küçükçekmece</span>
+                        <span class="text-xs text-white bg-primary/30 px-2 py-1 rounded font-medium">Sarıyer</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Silivri</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Sultangazi</span>
+                        <span class="text-xs text-white bg-primary/30 px-2 py-1 rounded font-medium">Şişli</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Zeytinburnu</span>
                     </div>
-                    <p class="mt-6 text-xs text-slate-400 border-t border-white/10 pt-4">* Tüm İstanbul geneline
-                        servisimiz vardır. Nakliye ücreti mesafeye göre değişiklik gösterebilir.</p>
+                    <h3 class="text-sm font-bold text-primary mb-4">Anadolu Yakası</h3>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 gap-2">
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Adalar</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Ataşehir</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Beykoz</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Çekmeköy</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Kadıköy</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Kartal</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Maltepe</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Pendik</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Sancaktepe</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Sultanbeyli</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Şile</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Tuzla</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Ümraniye</span>
+                        <span class="text-xs text-slate-300 bg-white/5 px-2 py-1 rounded">Üsküdar</span>
+                    </div>
+                    <p class="mt-6 text-xs text-slate-400 border-t border-white/10 pt-4">✓ Tüm İstanbul'a hizmet
+                        veriyoruz. Öncelikli bölgeler (Sarıyer, Beşiktaş, Şişli, Kağıthane) vurgulanmıştır.</p>
+
                 </div>
             </div>
         </div>
@@ -1025,6 +1119,49 @@
 
             window.open('https://wa.me/905394465834?text=' + whatsappMessage, '_blank');
         });
+    </script>
+
+    <!-- KVKK Cookie Banner -->
+    <div id="cookie-banner"
+        class="fixed bottom-0 left-0 right-0 bg-surface-dark border-t border-white/10 p-4 z-50 hidden">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-sm text-slate-300 text-center sm:text-left">
+                🍪 Bu web sitesi, deneyiminizi iyileştirmek için çerezleri kullanmaktadır.
+                <a href="/gizlilik-politikasi.html" class="text-primary hover:underline">Gizlilik Politikası</a>
+            </p>
+            <div class="flex gap-3">
+                <button onclick="acceptCookies()"
+                    class="bg-primary hover:bg-primary-hover text-white px-6 py-2 rounded-lg text-sm font-bold transition-colors">Kabul
+                    Et</button>
+                <button onclick="rejectCookies()"
+                    class="bg-white/10 hover:bg-white/20 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors">Reddet</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Cookie consent management
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookie-banner').classList.add('hidden');
+        }
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            document.getElementById('cookie-banner').classList.add('hidden');
+        }
+        // Show banner if no consent
+        if (!localStorage.getItem('cookieConsent')) {
+            document.getElementById('cookie-banner').classList.remove('hidden');
+        }
+
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function (reg) { console.log('SW registered:', reg.scope); })
+                    .catch(function (err) { console.log('SW registration failed:', err); });
+            });
+        }
     </script>
 </body>
 

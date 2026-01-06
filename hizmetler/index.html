@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="theme-color" content="#0d59f2" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png" />
 
     <!-- SEO Meta Tags -->
     <title>Hizmetlerimiz | Organizasyon ve Etkinlik - Sarıyer Orgist</title>
@@ -55,6 +56,17 @@
         }
     </style>
 </head>
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://sariyerorgist.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Hizmetler", "item": "https://sariyerorgist.com/hizmetler/"}
+        ]
+    }
+    </script>
 
 <body class="bg-background-dark text-slate-100 font-display antialiased">
 
@@ -63,8 +75,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 lg:h-20">
                 <a href="/" class="flex items-center gap-2">
-                    <span class="material-symbols-outlined text-primary text-3xl">event_available</span>
-                    <span class="font-bold text-lg lg:text-xl text-white">Sarıyer Orgist</span>
+                    <img src="/images/logo.png" alt="Sar�yer Orgist Logo" class="h-10 w-10 rounded-lg" />`n                    <span class="font-bold text-lg lg:text-xl text-white">Sarıyer Orgist</span>
                 </a>
                 <nav class="hidden lg:flex gap-8 items-center">
                     <a class="text-sm font-medium text-slate-300 hover:text-white" href="/">Ana Sayfa</a>
@@ -133,7 +144,7 @@
                     <div class="aspect-video relative overflow-hidden">
                         <img alt="Düğün organizasyonu"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuApF7VrXIsBx-CBvMEJmWk5zOQt7-fnV2DY7tDBgbkKIMnx-fWgWBO6IAfYJODXD_Sim9i9v2ko7E9nLZ-b5rDke1eMOO1nOMPss7_BT2ZdaF2N7iaKJM3TOnQAgulZ1SCw6ClM0yHRfdhggJw6d58ADpJpSczhI-wkzswMXLIDm4qvqO8zZyCFnnLPbAEjG4B73hNVf5b5YbHeFd_WWedizOo7E0DOUP4qSiKiBnZj2Hi57gtg8gV3wt-cIiY9JmAhD_XoV3Ypmi1z" />
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuApF7VrXIsBx-CBvMEJmWk5zOQt7-fnV2DY7tDBgbkKIMnx-fWgWBO6IAfYJODXD_Sim9i9v2ko7E9nLZ-b5rDke1eMOO1nOMPss7_BT2ZdaF2N7iaKJM3TOnQAgulZ1SCw6ClM0yHRfdhggJw6d58ADpJpSczhI-wkzswMXLIDm4qvqO8zZyCFnnLPbAEjG4B73hNVf5b5YbHeFd_WWedizOo7E0DOUP4qSiKiBnZj2Hi57gtg8gV3wt-cIiY9JmAhD_XoV3Ypmi1z" / loading="lazy">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-3">
@@ -153,7 +164,7 @@
                     <div class="aspect-video relative overflow-hidden">
                         <img alt="Doğum günü partisi"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxTLwUABTfCCsFPWmyum2n1pc6nEibHQB_ZKZiwYpIwsLFGyBcUDtMl7SurypjuR39eL5KeTsAOBIW4MdiOxCi_ebQUi-U_UUw79n1tuMK5jQtndsTtPI_T9sMzV2HcfemaNCUZiSW5INngvKkcF5o3ntupjJcydil7-70yWaXRs1r5jZLAe6IVCd7L5FNtmSNirPo5923BFX9BzTSK_xDIHqW5_Swmjp2ew92C70yp33MVoJJKOSlvteHPiCM9xhvEBZznhVi4d-9" />
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxTLwUABTfCCsFPWmyum2n1pc6nEibHQB_ZKZiwYpIwsLFGyBcUDtMl7SurypjuR39eL5KeTsAOBIW4MdiOxCi_ebQUi-U_UUw79n1tuMK5jQtndsTtPI_T9sMzV2HcfemaNCUZiSW5INngvKkcF5o3ntupjJcydil7-70yWaXRs1r5jZLAe6IVCd7L5FNtmSNirPo5923BFX9BzTSK_xDIHqW5_Swmjp2ew92C70yp33MVoJJKOSlvteHPiCM9xhvEBZznhVi4d-9" / loading="lazy">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-3">
@@ -173,7 +184,7 @@
                     <div class="aspect-video relative overflow-hidden">
                         <img alt="Kurumsal etkinlik"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-KH905G1PMSI3WoMhIWLRBm2hp9gZjDf9ozqcuw8Cc14OHAASABRPEVXBEclTRbu8F9JJo4VBAnDrN4uVrl-D5f_nrYw8k6t8YwOTEoTDoiSes1KKuYxZH6Ch8y45WmBty7qcygEheGB5Pqd4u522YABxSc31ifSnliYrONMaD985HLP3x8TyhrhzpdvdRt3rzllGnKd6Q3uV8Txh6P16F9t3tD19saXiTyrpGGdga1TTKz6Qj1ntl3imD1iOBNF3hgTbk2pvmloB" />
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-KH905G1PMSI3WoMhIWLRBm2hp9gZjDf9ozqcuw8Cc14OHAASABRPEVXBEclTRbu8F9JJo4VBAnDrN4uVrl-D5f_nrYw8k6t8YwOTEoTDoiSes1KKuYxZH6Ch8y45WmBty7qcygEheGB5Pqd4u522YABxSc31ifSnliYrONMaD985HLP3x8TyhrhzpdvdRt3rzllGnKd6Q3uV8Txh6P16F9t3tD19saXiTyrpGGdga1TTKz6Qj1ntl3imD1iOBNF3hgTbk2pvmloB" / loading="lazy">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-3">
@@ -193,7 +204,7 @@
                     <div class="aspect-video relative overflow-hidden">
                         <img alt="Açılış töreni"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo9oQfPxdCQdWIWjB6kAGE5W7FuWQ4x01tUGyPTA3WgoOV0TdAOQEvOYB3V4l6aDXEGEjz1TvAn9vxv31NyJhBQJpSxgUC_npF5w9E8iPpLx-QvcFiAJzdqbzVH7W5TNhL2kyCyWcQHC1BRUBsYmel8ZRhN-_r-qAOGudAlY1thzAJXVR1LHLENkVhiNVmA3ZhUehSH8NEWPKlXtm8MIUCMwijOqhiB67HUhfKLVO-QeCjg7SF1QDtMEDaybZXcN4AomHfBavMEGXG" />
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo9oQfPxdCQdWIWjB6kAGE5W7FuWQ4x01tUGyPTA3WgoOV0TdAOQEvOYB3V4l6aDXEGEjz1TvAn9vxv31NyJhBQJpSxgUC_npF5w9E8iPpLx-QvcFiAJzdqbzVH7W5TNhL2kyCyWcQHC1BRUBsYmel8ZRhN-_r-qAOGudAlY1thzAJXVR1LHLENkVhiNVmA3ZhUehSH8NEWPKlXtm8MIUCMwijOqhiB67HUhfKLVO-QeCjg7SF1QDtMEDaybZXcN4AomHfBavMEGXG" / loading="lazy">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-3">
@@ -213,7 +224,7 @@
                     <div class="aspect-video relative overflow-hidden">
                         <img alt="Sahne prodüksiyon"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-TzdtLFCueWdLg2uea7euREU80Cu3nq0KnZyyek90ovLgKWaNT8bdDjwR-n9pRlMf-knA0asUeCMu3w37z8ewYLEELLjpWhmghJzYdqeujsyihbvRRa_wtcXRfymlM7w_Xstryu-6Ezi88nfM87rDwyYhVFxOskds3SAKLkxRcLOSnmVALRmd4UsrsulOBO5SGj_IuK_lSkP6bRqEDOynPixkNcRqy9rj0vQnaeK4UX5QZgp3twlnt6c2LzJ0h3irBzJFKEvdyZ5V" />
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-TzdtLFCueWdLg2uea7euREU80Cu3nq0KnZyyek90ovLgKWaNT8bdDjwR-n9pRlMf-knA0asUeCMu3w37z8ewYLEELLjpWhmghJzYdqeujsyihbvRRa_wtcXRfymlM7w_Xstryu-6Ezi88nfM87rDwyYhVFxOskds3SAKLkxRcLOSnmVALRmd4UsrsulOBO5SGj_IuK_lSkP6bRqEDOynPixkNcRqy9rj0vQnaeK4UX5QZgp3twlnt6c2LzJ0h3irBzJFKEvdyZ5V" / loading="lazy">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-3">

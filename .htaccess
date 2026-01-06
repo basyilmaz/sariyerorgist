@@ -1,3 +1,6 @@
+# Directory Index
+DirectoryIndex index.html index.htm
+
 # Enable GZIP Compression
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json

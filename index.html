@@ -276,7 +276,7 @@
             <img alt="Dark elegant concert stage with blue lighting and crowd silhouette"
                 class="w-full h-full object-cover"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo9oQfPxdCQdWIWjB6kAGE5W7FuWQ4x01tUGyPTA3WgoOV0TdAOQEvOYB3V4l6aDXEGEjz1TvAn9vxv31NyJhBQJpSxgUC_npF5w9E8iPpLx-QvcFiAJzdqbzVH7W5TNhL2kyCyWcQHC1BRUBsYmel8ZRhN-_r-qAOGudAlY1thzAJXVR1LHLENkVhiNVmA3ZhUehSH8NEWPKlXtm8MIUCMwijOqhiB67HUhfKLVO-QeCjg7SF1QDtMEDaybZXcN4AomHfBavMEGXG"
-                / loading="lazy">
+                loading="lazy">
         </div>
         <div
             class="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 flex flex-col items-center text-center">
@@ -324,6 +324,30 @@
                 <div class="flex items-center gap-2 bg-surface-dark/50 px-3 py-1.5 rounded-full border border-white/5">
                     <span class="material-symbols-outlined text-primary text-lg">local_shipping</span>
                     Adrese Teslim Kurulum
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sayılarla Biz -->
+    <section class="py-12 bg-surface-dark border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl lg:text-5xl font-black text-primary mb-2">500<span class="text-2xl">+</span>
+                    </div>
+                    <div class="text-slate-400 text-sm font-medium">Başarılı Etkinlik</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl lg:text-5xl font-black text-white mb-2">10<span class="text-2xl">+</span></div>
+                    <div class="text-slate-400 text-sm font-medium">Yıllık Deneyim</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl lg:text-5xl font-black text-primary mb-2">%100</div>
+                    <div class="text-slate-400 text-sm font-medium">Müşteri Memnuniyeti</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl lg:text-5xl font-black text-white mb-2">39</div>
+                    <div class="text-slate-400 text-sm font-medium">İlçeye Hizmet</div>
                 </div>
             </div>
         </div>
@@ -432,35 +456,36 @@
                 <h2 class="text-3xl font-bold text-white mb-4">Kiralık Ekipmanlar</h2>
                 <p class="text-slate-400 max-w-2xl mx-auto">Etkinliğiniz için ihtiyacınız olan tüm teknik ve dekoratif
                     ekipmanlar stoklarımızda.</p>
-                <div
+                <div id="filter-buttons"
                     class="flex overflow-x-auto pb-4 sm:pb-0 sm:flex-wrap justify-start sm:justify-center gap-2 mt-8 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide snap-x">
-                    <button
-                        class="snap-start flex-shrink-0 px-4 py-2 rounded-full bg-primary text-white text-sm font-medium whitespace-nowrap">Tümü</button>
-                    <button
-                        class="snap-start flex-shrink-0 px-4 py-2 rounded-full bg-surface-dark border border-white/10 text-slate-300 hover:text-white hover:border-white/30 text-sm font-medium transition-all whitespace-nowrap">Ses
+                    <button data-filter="all"
+                        class="filter-btn active snap-start flex-shrink-0 px-4 py-2 rounded-full bg-primary text-white text-sm font-medium whitespace-nowrap transition-all">Tümü</button>
+                    <button data-filter="ses"
+                        class="filter-btn snap-start flex-shrink-0 px-4 py-2 rounded-full bg-surface-dark border border-white/10 text-slate-300 hover:text-white hover:border-white/30 text-sm font-medium transition-all whitespace-nowrap">Ses
                         Sistemleri</button>
-                    <button
-                        class="snap-start flex-shrink-0 px-4 py-2 rounded-full bg-surface-dark border border-white/10 text-slate-300 hover:text-white hover:border-white/30 text-sm font-medium transition-all whitespace-nowrap">Işık
+                    <button data-filter="isik"
+                        class="filter-btn snap-start flex-shrink-0 px-4 py-2 rounded-full bg-surface-dark border border-white/10 text-slate-300 hover:text-white hover:border-white/30 text-sm font-medium transition-all whitespace-nowrap">Işık
                         &amp; Truss</button>
-                    <button
-                        class="snap-start flex-shrink-0 px-4 py-2 rounded-full bg-surface-dark border border-white/10 text-slate-300 hover:text-white hover:border-white/30 text-sm font-medium transition-all whitespace-nowrap">Görüntü</button>
-                    <button
-                        class="snap-start flex-shrink-0 px-4 py-2 rounded-full bg-surface-dark border border-white/10 text-slate-300 hover:text-white hover:border-white/30 text-sm font-medium transition-all whitespace-nowrap">Masa
+                    <button data-filter="goruntu"
+                        class="filter-btn snap-start flex-shrink-0 px-4 py-2 rounded-full bg-surface-dark border border-white/10 text-slate-300 hover:text-white hover:border-white/30 text-sm font-medium transition-all whitespace-nowrap">Görüntü</button>
+                    <button data-filter="masa"
+                        class="filter-btn snap-start flex-shrink-0 px-4 py-2 rounded-full bg-surface-dark border border-white/10 text-slate-300 hover:text-white hover:border-white/30 text-sm font-medium transition-all whitespace-nowrap">Masa
                         &amp; Sandalye</button>
-                    <button
-                        class="snap-start flex-shrink-0 px-4 py-2 rounded-full bg-surface-dark border border-white/10 text-slate-300 hover:text-white hover:border-white/30 text-sm font-medium transition-all whitespace-nowrap">Isıtıcı
+                    <button data-filter="isitici"
+                        class="filter-btn snap-start flex-shrink-0 px-4 py-2 rounded-full bg-surface-dark border border-white/10 text-slate-300 hover:text-white hover:border-white/30 text-sm font-medium transition-all whitespace-nowrap">Isıtıcı
                         &amp; Jeneratör</button>
                 </div>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div
-                    class="bg-surface-dark rounded-xl overflow-hidden group hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex sm:block flex-row h-full">
+            <div id="equipment-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Ses Sistemleri -->
+                <div data-category="ses"
+                    class="equipment-card bg-surface-dark rounded-xl overflow-hidden group hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex sm:block flex-row h-full">
                     <div
                         class="w-1/3 sm:w-full aspect-square sm:aspect-square bg-surface-dark-lighter relative overflow-hidden shrink-0">
                         <img alt="Large black speaker system on a stand"
                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuArUONK_igYpPsonz1tpRhFabKaY6vH6H19P-cnSHdy98aLuONeOHsEtvf0iEqukApr2xd0b7mI4b8O5iFIy51EcHMPwnNJuXsO5TAggK_57bediNkjRU5qebYZhHIMZnTc_oF4l6wop218ivw2idVkWxhcNqfgeaVqo1lSGiVgCK6V0DFqMaeUY7irX2CLhSrTGOj7EM_6TBbyoholCA7yPN6h82ejOCAyUvJ4LGygpczUwEccvodTCHwGwvF5Zy_BmXqI3MCiteNR"
-                            / loading="lazy">
+                            loading="lazy">
                     </div>
                     <div class="p-4 sm:p-5 flex flex-col justify-between w-full">
                         <div>
@@ -475,21 +500,22 @@
                                         class="w-1 h-1 bg-primary rounded-full shrink-0"></span>Ayaklık Dahil</li>
                             </ul>
                         </div>
-                        <button
+                        <a href="https://wa.me/905394465834?text=Aktif%20Hoparlör%20Seti%20için%20teklif%20almak%20istiyorum"
                             class="w-full py-2 bg-white/5 hover:bg-primary text-white text-xs sm:text-sm font-medium rounded-lg transition-colors flex items-center justify-center gap-2 mt-auto">
                             Teklif İste <span
                                 class="material-symbols-outlined text-sm hidden sm:inline-block">arrow_forward</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div
-                    class="bg-surface-dark rounded-xl overflow-hidden group hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex sm:block flex-row h-full">
+                <!-- Işık & Truss -->
+                <div data-category="isik"
+                    class="equipment-card bg-surface-dark rounded-xl overflow-hidden group hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex sm:block flex-row h-full">
                     <div
                         class="w-1/3 sm:w-full aspect-square sm:aspect-square bg-surface-dark-lighter relative overflow-hidden shrink-0">
                         <img alt="Colorful stage lights pointing upwards"
                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-TzdtLFCueWdLg2uea7euREU80Cu3nq0KnZyyek90ovLgKWaNT8bdDjwR-n9pRlMf-knA0asUeCMu3w37z8ewYLEELLjpWhmghJzYdqeujsyihbvRRa_wtcXRfymlM7w_Xstryu-6Ezi88nfM87rDwyYhVFxOskds3SAKLkxRcLOSnmVALRmd4UsrsulOBO5SGj_IuK_lSkP6bRqEDOynPixkNcRqy9rj0vQnaeK4UX5QZgp3twlnt6c2LzJ0h3irBzJFKEvdyZ5V"
-                            / loading="lazy">
+                            loading="lazy">
                     </div>
                     <div class="p-4 sm:p-5 flex flex-col justify-between w-full">
                         <div>
@@ -504,21 +530,22 @@
                                         class="w-1 h-1 bg-primary rounded-full shrink-0"></span>LED Bar Boyama</li>
                             </ul>
                         </div>
-                        <button
+                        <a href="https://wa.me/905394465834?text=Robot%20Işık%20için%20teklif%20almak%20istiyorum"
                             class="w-full py-2 bg-white/5 hover:bg-primary text-white text-xs sm:text-sm font-medium rounded-lg transition-colors flex items-center justify-center gap-2 mt-auto">
                             Teklif İste <span
                                 class="material-symbols-outlined text-sm hidden sm:inline-block">arrow_forward</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div
-                    class="bg-surface-dark rounded-xl overflow-hidden group hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex sm:block flex-row h-full">
+                <!-- Masa & Sandalye -->
+                <div data-category="masa"
+                    class="equipment-card bg-surface-dark rounded-xl overflow-hidden group hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex sm:block flex-row h-full">
                     <div
                         class="w-1/3 sm:w-full aspect-square sm:aspect-square bg-surface-dark-lighter relative overflow-hidden shrink-0">
                         <img alt="Rows of white tiffany chairs at an event"
                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEJO8_zJMzeMV0BJmePOD-vd021ymTgvseTUb-GS4CTXRiLhmJTU6Hf-C83-5J0SKnyI0VvyW13B8Y5-CUa_ols4z2C0Wrbgvu_EPLR8sfk3gRvsxyQsGURv9KChlST6M2tiYRVEHLlfQMhTLVByZHDBb_DrUeXkds8l9u8PhVPmF9jntHs_4UK1Q41Ec6A4gOvan9HVKXANF_MW2smOUJUfsyFDmLb1KSuaey4OxUHz1T6g9blPji49Op13KZ4gdwA82X5WoJbRt3"
-                            / loading="lazy">
+                            loading="lazy">
                     </div>
                     <div class="p-4 sm:p-5 flex flex-col justify-between w-full">
                         <div>
@@ -533,21 +560,22 @@
                                         class="w-1 h-1 bg-primary rounded-full shrink-0"></span>Örtü Seçenekleri</li>
                             </ul>
                         </div>
-                        <button
+                        <a href="https://wa.me/905394465834?text=Masa%20Sandalye%20için%20teklif%20almak%20istiyorum"
                             class="w-full py-2 bg-white/5 hover:bg-primary text-white text-xs sm:text-sm font-medium rounded-lg transition-colors flex items-center justify-center gap-2 mt-auto">
                             Teklif İste <span
                                 class="material-symbols-outlined text-sm hidden sm:inline-block">arrow_forward</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
-                <div
-                    class="bg-surface-dark rounded-xl overflow-hidden group hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex sm:block flex-row h-full">
+                <!-- Isıtıcı & Jeneratör -->
+                <div data-category="isitici"
+                    class="equipment-card bg-surface-dark rounded-xl overflow-hidden group hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex sm:block flex-row h-full">
                     <div
                         class="w-1/3 sm:w-full aspect-square sm:aspect-square bg-surface-dark-lighter relative overflow-hidden shrink-0">
                         <img alt="Outdoor patio heater radiating warmth"
                             class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDcYAt1zLIXF-WjUGYNkP5_1tZEIW8A9OhMxI4_niGbeE45OAR5J1yU6qKIPdeJpo-RFbLSk2sWKN2HNGjd4RtBCswqD1pYs9WbCqDVsrW3Lmgc4bhYDkN8QgnMvXyPP6CJrXxMX4kmWwQYEhznT6xWvAOZC_lHhu4lSvapZxeSnK6SsYUlUby2UPq4bFOb5HbZ38KwhCq22gCK_SZyEFkNFsm-l3qELp0hNwFmJlF7xMhTOW3OxwTTxrASh2ZgZXTKXeXJU1yWdq2"
-                            / loading="lazy">
+                            loading="lazy">
                     </div>
                     <div class="p-4 sm:p-5 flex flex-col justify-between w-full">
                         <div>
@@ -562,13 +590,45 @@
                                         class="w-1 h-1 bg-primary rounded-full shrink-0"></span>Tüp Dahil</li>
                             </ul>
                         </div>
-                        <button
+                        <a href="https://wa.me/905394465834?text=Isıtıcı%20Jeneratör%20için%20teklif%20almak%20istiyorum"
                             class="w-full py-2 bg-white/5 hover:bg-primary text-white text-xs sm:text-sm font-medium rounded-lg transition-colors flex items-center justify-center gap-2 mt-auto">
                             Teklif İste <span
                                 class="material-symbols-outlined text-sm hidden sm:inline-block">arrow_forward</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
+                <!-- Görüntü / LED Ekran -->
+                <div data-category="goruntu"
+                    class="equipment-card bg-surface-dark rounded-xl overflow-hidden group hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 flex sm:block flex-row h-full">
+                    <div
+                        class="w-1/3 sm:w-full aspect-square sm:aspect-square bg-surface-dark-lighter relative overflow-hidden shrink-0 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-6xl opacity-50">tv</span>
+                    </div>
+                    <div class="p-4 sm:p-5 flex flex-col justify-between w-full">
+                        <div>
+                            <h3 class="text-white font-bold text-base sm:text-lg mb-2 sm:mb-3 line-clamp-1">LED Ekran
+                                &amp; Projeksiyon</h3>
+                            <ul class="text-slate-400 text-xs sm:text-sm space-y-1 sm:space-y-2 mb-3 sm:mb-4">
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 bg-primary rounded-full shrink-0"></span>P3 LED Panel</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 bg-primary rounded-full shrink-0"></span>Projeksiyon Cihazı</li>
+                                <li class="flex items-center gap-2"><span
+                                        class="w-1 h-1 bg-primary rounded-full shrink-0"></span>Perde Dahil</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/905394465834?text=LED%20Ekran%20için%20teklif%20almak%20istiyorum"
+                            class="w-full py-2 bg-white/5 hover:bg-primary text-white text-xs sm:text-sm font-medium rounded-lg transition-colors flex items-center justify-center gap-2 mt-auto">
+                            Teklif İste <span
+                                class="material-symbols-outlined text-sm hidden sm:inline-block">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- No Results Message -->
+            <div id="no-results" class="hidden text-center py-12">
+                <span class="material-symbols-outlined text-slate-500 text-5xl mb-4">search_off</span>
+                <p class="text-slate-400">Bu kategoride ekipman bulunamadı.</p>
             </div>
         </div>
     </section>
@@ -678,7 +738,7 @@
                     <img alt="Music band performing live on stage with lights"
                         class="absolute inset-0 w-full h-full object-cover"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJyLZwAPVHeLYD8rZqVdtzyIqZ60Q6kX-n4l_195DTC6eHoTLccgcUtyc-ikuoajs_u6UoDDmxt7EXULMp9Spb1Ajr5HA1FdupE4vY0gdwbBVjcDN9TvVygHB7oDCXj62diplnLocLKQ4mv4kWoodAM3dDXy-xEaUQrNazQkUyqsgt-aq-41QK0oFSdjs3gToMND34dUMNLzjXDiv_CRJwXljoKhn5dDKJrbNtlLuGsK9AnAmKohHu8Xvz95iK0p4uXaZ6HSa-8s6G"
-                        / loading="lazy">
+                        loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/80 to-transparent">
                     </div>
                     <div class="absolute bottom-6 left-6 lg:bottom-8 lg:left-8 text-white z-20">
@@ -786,9 +846,9 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[150px] md:auto-rows-[200px]">
                 <div class="col-span-2 row-span-2 rounded-xl overflow-hidden relative group">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        data-alt="Wedding setup with lights"
+                        alt="Düğün ışıklandırma ve dekorasyon kurulumu"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuApF7VrXIsBx-CBvMEJmWk5zOQt7-fnV2DY7tDBgbkKIMnx-fWgWBO6IAfYJODXD_Sim9i9v2ko7E9nLZ-b5rDke1eMOO1nOMPss7_BT2ZdaF2N7iaKJM3TOnQAgulZ1SCw6ClM0yHRfdhggJw6d58ADpJpSczhI-wkzswMXLIDm4qvqO8zZyCFnnLPbAEjG4B73hNVf5b5YbHeFd_WWedizOo7E0DOUP4qSiKiBnZj2Hi57gtg8gV3wt-cIiY9JmAhD_XoV3Ypmi1z"
-                        / loading="lazy">
+                        loading="lazy">
                     <div
                         class="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <span class="text-white font-bold text-lg md:text-xl text-center px-4">Düğün
@@ -797,25 +857,170 @@
                 </div>
                 <div class="rounded-xl overflow-hidden relative group">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        data-alt="Concert stage lights"
+                        alt="Konser sahne ışıkları ve efektler"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxTLwUABTfCCsFPWmyum2n1pc6nEibHQB_ZKZiwYpIwsLFGyBcUDtMl7SurypjuR39eL5KeTsAOBIW4MdiOxCi_ebQUi-U_UUw79n1tuMK5jQtndsTtPI_T9sMzV2HcfemaNCUZiSW5INngvKkcF5o3ntupjJcydil7-70yWaXRs1r5jZLAe6IVCd7L5FNtmSNirPo5923BFX9BzTSK_xDIHqW5_Swmjp2ew92C70yp33MVoJJKOSlvteHPiCM9xhvEBZznhVi4d-9"
-                        / loading="lazy">
+                        loading="lazy">
                 </div>
                 <div class="rounded-xl overflow-hidden relative group">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        data-alt="DJ mixing console"
+                        alt="DJ mikseri ve ses kontrol masası"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjZgGnp1KE4v3ZYmYdpqknXAmIe57I4uWg1m2PqFmvdY4C-kATM7vifU-IyFhmg3BLOtvcnFvZ7LOWQVdxvqNGXUu2YSZ--cZr_KORR3Bp5H_qcOOTBerUGhkEyf4c9X2o4efMH4Hb8BYEDzsBV1v_p4m--Z1UzRm6BjGPbnBToIJdUY2Km5-btICFkFfiBtxrt52YbAS7bB09bxXTOQ7hs-K4_ggqMi7rIjEbLNc-sB3Rp6tylbrxYF3upEjsiR7a6_I3rmIGXxQy"
-                        / loading="lazy">
+                        loading="lazy">
                 </div>
                 <div class="col-span-2 md:col-span-2 rounded-xl overflow-hidden relative group">
                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        data-alt="Corporate event audience"
+                        alt="Kurumsal etkinlik katılımcıları"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-KH905G1PMSI3WoMhIWLRBm2hp9gZjDf9ozqcuw8Cc14OHAASABRPEVXBEclTRbu8F9JJo4VBAnDrN4uVrl-D5f_nrYw8k6t8YwOTEoTDoiSes1KKuYxZH6Ch8y45WmBty7qcygEheGB5Pqd4u522YABxSc31ifSnliYrONMaD985HLP3x8TyhrhzpdvdRt3rzllGnKd6Q3uV8Txh6P16F9t3tD19saXiTyrpGGdga1TTKz6Qj1ntl3imD1iOBNF3hgTbk2pvmloB"
-                        / loading="lazy">
+                        loading="lazy">
                     <div
                         class="absolute inset-0 bg-black/40 opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <span class="text-white font-bold text-lg md:text-xl text-center px-4">Kurumsal
                             Etkinlikler</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Müşteri Yorumları -->
+    <section class="py-16 lg:py-20 bg-background-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Müşterilerimiz Ne Diyor?</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Yüzlerce mutlu müşterimizden bazıları...</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-surface-dark rounded-2xl p-6 border border-white/5 relative">
+                    <div class="absolute top-4 right-4 text-primary/30 text-5xl font-serif">"</div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary">person</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Ayşe & Mehmet</h4>
+                            <p class="text-slate-400 text-sm">Düğün Organizasyonu</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        "Düğünümüzde her şey mükemmeldi! Ses sistemi kusursuz çalıştı, DJ müthişti. Tüm misafirlerimiz
+                        çok eğlendi. Kesinlikle tavsiye ediyorum."
+                    </p>
+                    <div class="flex gap-1 mt-4">
+                        <span class="material-symbols-outlined text-yellow-400 text-lg">star</span>
+                        <span class="material-symbols-outlined text-yellow-400 text-lg">star</span>
+                        <span class="material-symbols-outlined text-yellow-400 text-lg">star</span>
+                        <span class="material-symbols-outlined text-yellow-400 text-lg">star</span>
+                        <span class="material-symbols-outlined text-yellow-400 text-lg">star</span>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-surface-dark rounded-2xl p-6 border border-white/5 relative">
+                    <div class="absolute top-4 right-4 text-primary/30 text-5xl font-serif">"</div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary">business</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">ABC Şirketi</h4>
+                            <p class="text-slate-400 text-sm">Kurumsal Etkinlik</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        "Şirket lansmanımız için sahne ve ışık sistemi kiraladık. Ekip çok profesyonel, zamanında
+                        kurulum yaptılar. Her şey sorunsuz geçti."
+                    </p>
+                    <div class="flex gap-1 mt-4">
+                        <span class="material-symbols-outlined text-yellow-400 text-lg">star</span>
+                        <span class="material-symbols-outlined text-yellow-400 text-lg">star</span>
+                        <span class="material-symbols-outlined text-yellow-400 text-lg">star</span>
+                        <span class="material-symbols-outlined text-yellow-400 text-lg">star</span>
+                        <span class="material-symbols-outlined text-yellow-400 text-lg">star</span>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-surface-dark rounded-2xl p-6 border border-white/5 relative">
+                    <div class="absolute top-4 right-4 text-primary/30 text-5xl font-serif">"</div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary">cake</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold">Zeynep H.</h4>
+                            <p class="text-slate-400 text-sm">Doğum Günü Partisi</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        "Oğlumun 10. yaş partisi için her şeyi organize ettiler. Işık şovu çocukların favorisi oldu!
+                        Fiyatlar da çok uygundu. Teşekkürler!"
+                    </p>
+                    <div class="flex gap-1 mt-4">
+                        <span class="material-symbols-outlined text-yellow-400 text-lg">star</span>
+                        <span class="material-symbols-outlined text-yellow-400 text-lg">star</span>
+                        <span class="material-symbols-outlined text-yellow-400 text-lg">star</span>
+                        <span class="material-symbols-outlined text-yellow-400 text-lg">star</span>
+                        <span class="material-symbols-outlined text-yellow-400 text-lg">star</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog / Rehber Bölümü -->
+    <section class="py-16 lg:py-20 bg-[#0b0d10]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Rehberler & İpuçları</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Etkinlik planlaması hakkında faydalı bilgiler</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Blog Post 1 -->
+                <div
+                    class="group bg-surface-dark rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all">
+                    <div
+                        class="aspect-video bg-gradient-to-br from-primary/20 to-surface-dark-lighter flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-5xl">celebration</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-wider">Düğün</span>
+                        <h3 class="text-white font-bold text-lg mt-2 mb-3 group-hover:text-primary transition-colors">
+                            Düğün Organizasyonu Nasıl Planlanır?</h3>
+                        <p class="text-slate-400 text-sm line-clamp-2">Mükemmel bir düğün için adım adım planlama
+                            rehberi. Mekan seçiminden ekipman kiralamasına...</p>
+                        <span class="text-primary text-sm font-medium flex items-center gap-1 mt-4">Yakında <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </div>
+                <!-- Blog Post 2 -->
+                <div
+                    class="group bg-surface-dark rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all">
+                    <div
+                        class="aspect-video bg-gradient-to-br from-primary/20 to-surface-dark-lighter flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-5xl">speaker_group</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-wider">Teknik</span>
+                        <h3 class="text-white font-bold text-lg mt-2 mb-3 group-hover:text-primary transition-colors">
+                            Ses Sistemi Seçim Rehberi</h3>
+                        <p class="text-slate-400 text-sm line-clamp-2">Etkinlik büyüklüğüne göre doğru ses sistemi nasıl
+                            seçilir? Watt hesaplama yöntemleri...</p>
+                        <span class="text-primary text-sm font-medium flex items-center gap-1 mt-4">Yakında <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </div>
+                <!-- Blog Post 3 -->
+                <div
+                    class="group bg-surface-dark rounded-2xl overflow-hidden border border-white/5 hover:border-primary/50 transition-all">
+                    <div
+                        class="aspect-video bg-gradient-to-br from-primary/20 to-surface-dark-lighter flex items-center justify-center">
+                        <span class="material-symbols-outlined text-primary text-5xl">trending_up</span>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-primary text-xs font-bold uppercase tracking-wider">Trend</span>
+                        <h3 class="text-white font-bold text-lg mt-2 mb-3 group-hover:text-primary transition-colors">
+                            2026 Düğün Trendleri</h3>
+                        <p class="text-slate-400 text-sm line-clamp-2">Bu yılın en popüler düğün konseptleri, dekorasyon
+                            stilleri ve müzik seçimleri...</p>
+                        <span class="text-primary text-sm font-medium flex items-center gap-1 mt-4">Yakında <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
                     </div>
                 </div>
             </div>
@@ -879,7 +1084,7 @@
                         <img alt="Map view of Istanbul bosphorus" class="w-full h-full object-cover opacity-60"
                             data-location="Istanbul"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRYCjQCN1x8bGRx1ty83_W_PqxIrAb4BW9v_4OLA9wNOALWgEBbn3movn7S6aJw4iPuEaeIdjjz3GcZch8gj12KdkPzL8XdIy_jwg_m7tnbwDHkRY1PzU7_KJYh3cBoLCmIyUvLGYYQBRYS-vlvIQRhxk0WNgnmL5a-TwT8KiWgohfMs4uzytFBl1irMarZrGacfdlk3s6wMfJhLMeikAgeu_qnR4ANQuBqZDT9wgy-nVR4f9F-UznZv2PqNCHJDe7EJXa0CMXedEz"
-                            / loading="lazy">
+                            loading="lazy">
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div
                                 class="bg-black/70 px-4 py-2 rounded text-white text-sm font-bold backdrop-blur-sm text-center">
@@ -1118,6 +1323,51 @@
             if (message) whatsappMessage += '%0A💬 Mesaj: ' + encodeURIComponent(message);
 
             window.open('https://wa.me/905394465834?text=' + whatsappMessage, '_blank');
+        });
+
+        // Equipment Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const equipmentCards = document.querySelectorAll('.equipment-card');
+        const noResults = document.getElementById('no-results');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const filter = this.dataset.filter;
+
+                // Update active button styles
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-primary', 'text-white');
+                    btn.classList.add('bg-surface-dark', 'border', 'border-white/10', 'text-slate-300');
+                });
+                this.classList.add('active', 'bg-primary', 'text-white');
+                this.classList.remove('bg-surface-dark', 'border', 'border-white/10', 'text-slate-300');
+
+                // Filter cards
+                let visibleCount = 0;
+                equipmentCards.forEach(card => {
+                    const category = card.dataset.category;
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = '';
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 50);
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Show/hide no results message
+                if (visibleCount === 0) {
+                    noResults.classList.remove('hidden');
+                } else {
+                    noResults.classList.add('hidden');
+                }
+            });
         });
     </script>
 

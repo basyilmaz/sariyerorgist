@@ -173,25 +173,44 @@
                     </a>
                 </div>
                 <div class="lg:hidden">
-                    <button id="mobile-menu-btn" class="text-white p-2 focus:outline-none">
-                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    <button id="mobile-menu-btn"
+                        class="relative text-white p-2 focus:outline-none w-10 h-10 flex items-center justify-center bg-surface-dark rounded-lg border border-white/10"
+                        aria-label="Menü">
+                        <span id="menu-icon"
+                            class="material-symbols-outlined text-2xl transition-transform duration-300">menu</span>
                     </button>
                 </div>
                 <!-- Mobile Menu Dropdown -->
                 <nav id="mobile-menu"
-                    class="hidden absolute top-full left-0 right-0 bg-[#0f1115]/98 backdrop-blur-lg border-b border-white/10 py-4 px-6 flex-col gap-3 lg:hidden">
-                    <a class="block text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-white/5"
-                        href="#hero" onclick="closeMobileMenu()">Ana Sayfa</a>
-                    <a class="block text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-white/5"
-                        href="#hizmetler" onclick="closeMobileMenu()">Hizmetler</a>
-                    <a class="block text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-white/5"
-                        href="#ekipmanlar" onclick="closeMobileMenu()">Kiralık Ekipman</a>
-                    <a class="block text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-white/5"
-                        href="#paketler" onclick="closeMobileMenu()">Paketler</a>
-                    <a class="block text-sm font-medium text-slate-300 hover:text-white py-2 border-b border-white/5"
-                        href="#canli-muzik" onclick="closeMobileMenu()">Canlı Müzik</a>
-                    <a class="block text-sm font-medium text-slate-300 hover:text-white py-2" href="#iletisim"
-                        onclick="closeMobileMenu()">İletişim</a>
+                    class="hidden absolute top-full left-0 right-0 bg-[#0f1115] border-b-2 border-primary shadow-2xl shadow-black/50 py-6 px-6 flex-col gap-2 lg:hidden z-50">
+                    <a class="flex items-center gap-3 text-base font-semibold text-white py-3 px-4 rounded-xl bg-surface-dark hover:bg-primary transition-colors"
+                        href="#hero" onclick="closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">home</span>Ana Sayfa</a>
+                    <a class="flex items-center gap-3 text-base font-semibold text-white py-3 px-4 rounded-xl bg-surface-dark hover:bg-primary transition-colors"
+                        href="#hizmetler" onclick="closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">celebration</span>Hizmetler</a>
+                    <a class="flex items-center gap-3 text-base font-semibold text-white py-3 px-4 rounded-xl bg-surface-dark hover:bg-primary transition-colors"
+                        href="#ekipmanlar" onclick="closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">speaker_group</span>Kiralık Ekipman</a>
+                    <a class="flex items-center gap-3 text-base font-semibold text-white py-3 px-4 rounded-xl bg-surface-dark hover:bg-primary transition-colors"
+                        href="#paketler" onclick="closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">inventory_2</span>Paketler</a>
+                    <a class="flex items-center gap-3 text-base font-semibold text-white py-3 px-4 rounded-xl bg-surface-dark hover:bg-primary transition-colors"
+                        href="#canli-muzik" onclick="closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">music_note</span>Canlı Müzik</a>
+                    <a class="flex items-center gap-3 text-base font-semibold text-white py-3 px-4 rounded-xl bg-surface-dark hover:bg-primary transition-colors"
+                        href="#iletisim" onclick="closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">mail</span>İletişim</a>
+                    <div class="border-t border-white/10 mt-4 pt-4 flex gap-3">
+                        <a class="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-xl font-bold text-sm"
+                            href="https://wa.me/905394465834">
+                            <span class="material-symbols-outlined">chat</span>WhatsApp
+                        </a>
+                        <a class="flex-1 flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-xl font-bold text-sm"
+                            href="tel:+905394465834">
+                            <span class="material-symbols-outlined">call</span>Ara
+                        </a>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -959,15 +978,26 @@
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
 
         mobileMenuBtn.addEventListener('click', function () {
             mobileMenu.classList.toggle('hidden');
             mobileMenu.classList.toggle('flex');
+            // Toggle icon
+            if (mobileMenu.classList.contains('flex')) {
+                menuIcon.textContent = 'close';
+                menuIcon.style.transform = 'rotate(180deg)';
+            } else {
+                menuIcon.textContent = 'menu';
+                menuIcon.style.transform = 'rotate(0deg)';
+            }
         });
 
         function closeMobileMenu() {
             mobileMenu.classList.add('hidden');
             mobileMenu.classList.remove('flex');
+            menuIcon.textContent = 'menu';
+            menuIcon.style.transform = 'rotate(0deg)';
         }
 
         // Dynamic year

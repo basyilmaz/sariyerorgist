@@ -1,23 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="dark" lang="tr">
-
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="theme-color" content="#0d59f2" />
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png" />
-
-    <!-- SEO Meta Tags -->
     <title>Kullanım Şartları | Sarıyer Orgist</title>
-    <meta name="description" content="Sarıyer Orgist kullanım şartları. Web sitesi ve hizmet kullanım koşulları." />
+    <meta name="description" content="Sarıyer Orgist web sitesi kullanım şartları ve koşulları." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://sariyerorgist.com/kullanim-sartlari.html" />
-
-    <!-- Fonts & Tailwind -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
         tailwind.config = {
@@ -37,25 +30,17 @@
         }
     </script>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .glass-nav {
-            background: rgba(15, 17, 21, 0.85);
-            backdrop-filter: blur(12px);
-        }
+        html { scroll-behavior: smooth; }
+        .glass-nav { background: rgba(15, 17, 21, 0.85); backdrop-filter: blur(12px); }
     </style>
 </head>
-
 <body class="bg-background-dark text-slate-100 font-display antialiased">
-
-    <!-- Header -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 lg:h-20">
                 <a href="/" class="flex items-center gap-2">
-                    <img src="/images/logo-56.webp" alt="Sar�yer Orgist Logo" class="h-14 w-14 rounded-lg" />`n                    <span class="font-bold text-lg lg:text-xl text-white">Sarıyer Orgist</span>
+                    <img src="/images/logo-56.webp" alt="Sarıyer Orgist Logo" class="h-14 w-14 rounded-lg" />
+                    <span class="font-bold text-lg lg:text-xl text-white">Sarıyer Orgist</span>
                 </a>
                 <nav class="hidden lg:flex gap-8 items-center">
                     <a class="text-sm font-medium text-slate-300 hover:text-white" href="/">Ana Sayfa</a>
@@ -63,113 +48,72 @@
                     <a class="text-sm font-medium text-slate-300 hover:text-white" href="/kiralama.html">Kiralama</a>
                     <a class="text-sm font-medium text-slate-300 hover:text-white" href="/#iletisim">İletişim</a>
                 </nav>
-                <a class="hidden lg:flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-4 py-2 rounded-lg text-sm font-bold"
-                    href="https://wa.me/905394465834" target="_blank">
+                <a class="hidden lg:flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-4 py-2 rounded-lg text-sm font-bold" href="https://wa.me/905394465834" target="_blank">
                     <span class="material-symbols-outlined text-[20px]">chat</span> WhatsApp
                 </a>
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="relative text-white p-2 focus:outline-none w-10 h-10 flex items-center justify-center bg-surface-dark rounded-lg border border-white/10" aria-label="Menü">
+                        <span id="menu-icon" class="material-symbols-outlined text-2xl transition-transform duration-300">menu</span>
+                    </button>
+                </div>
+                <nav id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-[#0f1115] border-b-2 border-primary shadow-2xl shadow-black/50 py-6 px-6 flex-col gap-2 lg:hidden z-50">
+                    <a class="flex items-center gap-3 text-base font-semibold text-white py-3 px-4 rounded-xl bg-surface-dark hover:bg-primary transition-colors" href="/" onclick="closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">home</span>Ana Sayfa</a>
+                    <a class="flex items-center gap-3 text-base font-semibold text-white py-3 px-4 rounded-xl bg-surface-dark hover:bg-primary transition-colors" href="/hizmetler/" onclick="closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">celebration</span>Hizmetler</a>
+                    <a class="flex items-center gap-3 text-base font-semibold text-white py-3 px-4 rounded-xl bg-surface-dark hover:bg-primary transition-colors" href="/kiralama.html" onclick="closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">speaker_group</span>Kiralama</a>
+                    <a class="flex items-center gap-3 text-base font-semibold text-white py-3 px-4 rounded-xl bg-surface-dark hover:bg-primary transition-colors" href="/#iletisim" onclick="closeMobileMenu()">
+                        <span class="material-symbols-outlined text-primary">mail</span>İletişim</a>
+                    <div class="border-t border-white/10 mt-4 pt-4 flex gap-3">
+                        <a class="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-xl font-bold text-sm" href="https://wa.me/905394465834">
+                            <span class="material-symbols-outlined">chat</span>WhatsApp</a>
+                        <a class="flex-1 flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-xl font-bold text-sm" href="tel:+905394465834">
+                            <span class="material-symbols-outlined">call</span>Ara</a>
+                    </div>
+                </nav>
             </div>
         </div>
     </header>
-
-    <!-- Content -->
     <main class="pt-32 pb-20 bg-background-dark">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="text-sm text-slate-400 mb-6">
                 <a href="/" class="hover:text-white">Ana Sayfa</a> / <span class="text-white">Kullanım Şartları</span>
             </nav>
-
             <h1 class="text-4xl font-black text-white mb-8">Kullanım Şartları</h1>
-
             <div class="prose prose-invert max-w-none space-y-8 text-slate-300">
-
                 <section>
                     <h2 class="text-2xl font-bold text-white mb-4">1. Genel Hükümler</h2>
-                    <p>Bu web sitesini kullanarak aşağıdaki şartları kabul etmiş sayılırsınız. Sarıyer Orgist, bu
-                        şartları önceden haber vermeksizin değiştirme hakkını saklı tutar.</p>
+                    <p>Bu web sitesini kullanarak aşağıdaki kullanım şartlarını kabul etmiş sayılırsınız.</p>
                 </section>
-
                 <section>
-                    <h2 class="text-2xl font-bold text-white mb-4">2. Hizmet Tanımı</h2>
-                    <p>Sarıyer Orgist, İstanbul genelinde organizasyon ve ekipman kiralama hizmeti sunmaktadır.
-                        Hizmetlerimiz şunları kapsar:</p>
-                    <ul class="list-disc pl-6 space-y-2 mt-4">
-                        <li>Düğün, nişan, kına organizasyonu</li>
-                        <li>Doğum günü ve özel gün organizasyonu</li>
-                        <li>Kurumsal etkinlik organizasyonu</li>
-                        <li>Açılış ve lansman organizasyonu</li>
-                        <li>Ses, ışık, sahne ve teknik ekipman kiralama</li>
-                        <li>Masa, sandalye ve mobilya kiralama</li>
-                        <li>Canlı müzik ve DJ hizmeti</li>
-                    </ul>
+                    <h2 class="text-2xl font-bold text-white mb-4">2. Hizmet Kullanımı</h2>
+                    <p>Web sitemiz yalnızca bilgilendirme ve iletişim amacıyla hizmet vermektedir.</p>
                 </section>
-
                 <section>
-                    <h2 class="text-2xl font-bold text-white mb-4">3. Rezervasyon ve Ödeme</h2>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li>Rezervasyon için %30 kapora alınmaktadır.</li>
-                        <li>Kalan tutar etkinlik günü nakit veya havale ile tahsil edilir.</li>
-                        <li>İptal durumunda kapora iade edilmez.</li>
-                        <li>Tüm hizmetler için fatura kesilmektedir.</li>
-                    </ul>
+                    <h2 class="text-2xl font-bold text-white mb-4">3. Fikri Mülkiyet</h2>
+                    <p>Site içeriği Sarıyer Orgist'e aittir ve izinsiz kullanılamaz.</p>
                 </section>
-
                 <section>
                     <h2 class="text-2xl font-bold text-white mb-4">4. Sorumluluk Reddi</h2>
-                    <p>Kiralanan ekipmanların kullanımından kaynaklanan hasarlardan müşteri sorumludur. Sarıyer Orgist,
-                        mücbir sebepler (doğal afet, pandemi vb.) nedeniyle hizmet verilememesi durumunda sorumluluk
-                        kabul etmez.</p>
+                    <p>Site içeriğinin doğruluğu garanti edilmemektedir.</p>
                 </section>
-
                 <section>
-                    <h2 class="text-2xl font-bold text-white mb-4">5. Fikri Mülkiyet</h2>
-                    <p>Bu web sitesindeki tüm içerik, görseller ve tasarımlar Sarıyer Orgist'e aittir. İzinsiz kullanımı
-                        yasaktır.</p>
+                    <h2 class="text-2xl font-bold text-white mb-4">5. Değişiklikler</h2>
+                    <p>Bu şartlar önceden bildirilmeksizin değiştirilebilir.</p>
                 </section>
-
                 <section>
-                    <h2 class="text-2xl font-bold text-white mb-4">6. Teslimat ve Kurulum</h2>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li>Ekipmanlar belirtilen adrese teslim edilir.</li>
-                        <li>Kurulum ve söküm hizmetimize dahildir.</li>
-                        <li>Nakliye ücreti mesafeye göre değişebilir.</li>
-                        <li>Teslimat saati etkinlikten en az 3 saat önce yapılır.</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-4">7. Hizmet Bölgeleri</h2>
-                    <p>Tüm İstanbul'a (39 ilçe) hizmet vermekteyiz.</p>
-                    <p class="mt-4"><strong>Öncelikli bölgeler (ücretsiz nakliye):</strong></p>
-                    <ul class="list-disc pl-6 space-y-2 mt-2">
-                        <li>Sarıyer</li>
-                        <li>Beşiktaş</li>
-                        <li>Şişli</li>
-                        <li>Kağıthane</li>
-                    </ul>
-                    <p class="mt-4">Diğer ilçelere nakliye ücreti mesafeye göre hesaplanmaktadır.</p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-4">8. İletişim</h2>
-                    <p>Kullanım şartları hakkında sorularınız için:</p>
+                    <h2 class="text-2xl font-bold text-white mb-4">6. İletişim</h2>
                     <div class="bg-surface-dark p-6 rounded-xl mt-4">
                         <p><strong>Yetkili:</strong> Hasan Karadoruk</p>
-                        <p><strong>Telefon:</strong> <a href="tel:+905394465834"
-                                class="text-primary hover:underline">+90 539 446 58 34</a></p>
-                        <p><strong>E-posta:</strong> <a href="mailto:info@sariyerorgist.com"
-                                class="text-primary hover:underline">info@sariyerorgist.com</a></p>
+                        <p><strong>Telefon:</strong> <a href="tel:+905394465834" class="text-primary hover:underline">+90 539 446 58 34</a></p>
+                        <p><strong>E-posta:</strong> <a href="mailto:info@sariyerorgist.com" class="text-primary hover:underline">info@sariyerorgist.com</a></p>
                     </div>
                 </section>
-
-                <section>
-                    <p class="text-slate-400 text-sm mt-8">Son güncelleme: Ocak 2026</p>
-                </section>
-
+                <p class="text-slate-400 text-sm mt-8">Son güncelleme: Ocak 2026</p>
             </div>
         </div>
     </main>
-
-    <!-- Footer -->
     <footer class="bg-black py-8 border-t border-white/10">
         <div class="max-w-7xl mx-auto px-4 text-center text-slate-500 text-sm">
             <p>© <span id="year"></span> Sarıyer Orgist. Tüm hakları saklıdır.</p>
@@ -180,8 +124,28 @@
             </div>
         </div>
     </footer>
-
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        mobileMenuBtn.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            if (mobileMenu.classList.contains('flex')) {
+                menuIcon.textContent = 'close';
+                menuIcon.style.transform = 'rotate(180deg)';
+            } else {
+                menuIcon.textContent = 'menu';
+                menuIcon.style.transform = 'rotate(0deg)';
+            }
+        });
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+            menuIcon.textContent = 'menu';
+            menuIcon.style.transform = 'rotate(0deg)';
+        }
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
-
 </html>

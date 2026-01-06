@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sariyerorgist.com/sitemap.xml
+
+# Sarıyer Orgist - Organizasyon ve Ekipman Kiralama
+# Sarıyer, Beşiktaş, Şişli, Kağıthane

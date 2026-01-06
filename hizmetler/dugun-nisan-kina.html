@@ -78,6 +78,36 @@
                     href="https://wa.me/905394465834" target="_blank">
                     <span class="material-symbols-outlined text-[20px]">chat</span> WhatsApp
                 </a>
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn"
+                        class="relative text-white p-2 focus:outline-none w-10 h-10 flex items-center justify-center bg-surface-dark rounded-lg border border-white/10"
+                        aria-label="Menü">
+                        <span id="menu-icon"
+                            class="material-symbols-outlined text-2xl transition-transform duration-300">menu</span>
+                    </button>
+                </div>
+                <nav id="mobile-menu"
+                    class="hidden absolute top-full left-0 right-0 bg-[#0f1115] border-b-2 border-primary shadow-2xl shadow-black/50 py-6 px-6 flex-col gap-2 lg:hidden z-50">
+                    <a class="flex items-center gap-3 text-base font-semibold text-white py-3 px-4 rounded-xl bg-surface-dark hover:bg-primary transition-colors"
+                        href="/" onclick="closeMobileMenu()"><span
+                            class="material-symbols-outlined text-primary">home</span>Ana Sayfa</a>
+                    <a class="flex items-center gap-3 text-base font-semibold text-white py-3 px-4 rounded-xl bg-primary transition-colors"
+                        href="/hizmetler/" onclick="closeMobileMenu()"><span
+                            class="material-symbols-outlined text-white">celebration</span>Hizmetler</a>
+                    <a class="flex items-center gap-3 text-base font-semibold text-white py-3 px-4 rounded-xl bg-surface-dark hover:bg-primary transition-colors"
+                        href="/kiralama.html" onclick="closeMobileMenu()"><span
+                            class="material-symbols-outlined text-primary">speaker_group</span>Kiralama</a>
+                    <a class="flex items-center gap-3 text-base font-semibold text-white py-3 px-4 rounded-xl bg-surface-dark hover:bg-primary transition-colors"
+                        href="/#iletisim" onclick="closeMobileMenu()"><span
+                            class="material-symbols-outlined text-primary">mail</span>İletişim</a>
+                    <div class="border-t border-white/10 mt-4 pt-4 flex gap-3">
+                        <a class="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-xl font-bold text-sm"
+                            href="https://wa.me/905394465834"><span
+                                class="material-symbols-outlined">chat</span>WhatsApp</a>
+                        <a class="flex-1 flex items-center justify-center gap-2 bg-primary text-white py-3 rounded-xl font-bold text-sm"
+                            href="tel:+905394465834"><span class="material-symbols-outlined">call</span>Ara</a>
+                    </div>
+                </nav>
             </div>
         </div>
     </header>
@@ -182,7 +212,14 @@
         </div>
     </footer>
 
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        mobileMenuBtn.addEventListener('click', function () { mobileMenu.classList.toggle('hidden'); mobileMenu.classList.toggle('flex'); if (mobileMenu.classList.contains('flex')) { menuIcon.textContent = 'close'; menuIcon.style.transform = 'rotate(180deg)'; } else { menuIcon.textContent = 'menu'; menuIcon.style.transform = 'rotate(0deg)'; } });
+        function closeMobileMenu() { mobileMenu.classList.add('hidden'); mobileMenu.classList.remove('flex'); menuIcon.textContent = 'menu'; menuIcon.style.transform = 'rotate(0deg)'; }
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
